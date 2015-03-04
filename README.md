@@ -16,7 +16,7 @@ ember install:addon ember-cli-mp
 
 In your ```config\environment.js``` add the following to set up to the right environment:
 
-```json
+```javascript
 ENV.mixpanel = {
   pageViewEventName: 'visit',
   pageViewPropertyName: 'url',
@@ -37,7 +37,7 @@ mixpanel.track('visit', {url: 'someUrl'});
 
 ### tacking as url or route name.
 
-If you set ```trackAsPage``` to false it will use ```router.currentHandlerInfos``` to get the route name and track view that way. 
+If you set ```trackAsPage``` to false it will use ```router.currentHandlerInfos``` to get the route name and track view that way.
 
 ### tracking everything else
 
