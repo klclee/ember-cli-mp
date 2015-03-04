@@ -35,7 +35,7 @@ mixpanel.track('visit', {url: 'someUrl'});
 
 ```
 
-### tacking as url or route name.
+### tracking as url or route name.
 
 If you set ```trackAsPage``` to false it will use ```router.currentHandlerInfos``` to get the route name and track view that way.
 
