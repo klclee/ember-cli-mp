@@ -12,7 +12,19 @@ Inspired by [ember-cli-google-analytics](https://github.com/pgrippi/ember-cli-go
 ember install:addon ember-cli-mp
 ```
 
-## Config
+## Enable Page View tracking
+
+Installing this add-on gives you the ```mixpanel``` object. To track page views you will need to add the following to your ```router.js```
+
+```javascript
+import MpPageView from 'pluck-client/mixins/mp-pageview';
+
+var Router = Ember.Router.extend(MpPageView,{
+  location: config.locationType
+});
+```
+
+### Config
 
 In your ```config\environment.js``` add the following to set up to the right environment:
 
