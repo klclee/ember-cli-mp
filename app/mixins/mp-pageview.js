@@ -17,7 +17,8 @@ export default Ember.Mixin.create({
 
     var eventValue = this.get('url');
     if(!mpConfig.trackAsPage){
-      eventValue = this.router.currentHandlerInfos[1].name;
+      var handlerInfo = this.router.currentHandlerInfos;
+      eventValue = handlerInfo[ handlerInfo.length -1 ].name;
     }
 
     var mpEventProperty = {};

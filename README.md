@@ -17,7 +17,7 @@ ember install:addon ember-cli-mp
 Installing this add-on gives you the ```mixpanel``` object. To track page views you will need to add the following to your ```router.js```
 
 ```javascript
-import MpPageView from 'pluck-client/mixins/mp-pageview';
+import MpPageView from 'app-name/mixins/mp-pageview';
 
 var Router = Ember.Router.extend(MpPageView,{
   location: config.locationType
