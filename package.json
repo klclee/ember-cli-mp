@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mp",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "A Ember cli addon for integration with mixpanel.",
   "directories": {
     "doc": "doc",
@@ -17,7 +17,7 @@
   },
   "author": "charles lee",
   "contributors": [
-    { "name" : "Houzhang Liang", "email" : "b@rubble.com", "url" : "https://github.com/houzhang"}
+    "Houzhang Liang <c@butor.com> (https://github.com/houzhang)"
   ],
   "license": "MIT",
   "dependencies": {
