@@ -16,6 +16,9 @@
     "node": ">= 4"
   },
   "author": "charles lee",
+  "contributors": [
+    { "name" : "Houzhang Liang", "email" : "b@rubble.com", "url" : "https://github.com/houzhang"}
+  ],
   "license": "MIT",
   "dependencies": {
     "ember-cli-babel": "^5.1.7"
