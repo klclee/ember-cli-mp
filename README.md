@@ -6,6 +6,8 @@ Inspired by [ember-cli-google-analytics](https://github.com/pgrippi/ember-cli-go
 * Insert mixpanel lib so the global ```mixpanel``` object is available. Default to ```console.log``` if key is not present.
 * A mixin that tracks your route visits either as URL or route name. With configureable event name, property.
 
+**NOTE: for Ember >= 2.18 please use version 0.1.7 else use 0.1.6**
+
 ## Installation
 
 ```

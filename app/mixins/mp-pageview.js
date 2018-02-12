@@ -14,12 +14,11 @@ export default Ember.Mixin.create({
       Ember.warn('No mixpanel info set in environment.js using defaults');
     }
 
-
-    var eventValue = this.get('url');
+    var eventValue = this.get('router.currentURL');
     if(!mpConfig.trackAsPage){
-      var handlerInfo = this.router.currentHandlerInfos;
-      eventValue = handlerInfo[ handlerInfo.length -1 ].name;
+      eventValue = this.get('router.currentRouteName')
     }
+
 
     var mpEventProperty = {};
     mpEventProperty[mpConfig.pageViewPropertyName] = eventValue;
