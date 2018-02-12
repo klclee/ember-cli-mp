@@ -2,6 +2,7 @@ import Ember from 'ember';
 import ENV from '../config/environment';
 
 export default Ember.Mixin.create({
+  router: Ember.inject.service(),
   pageViewMp: function(){
     var mpConfig = ENV.mixpanel;
 
