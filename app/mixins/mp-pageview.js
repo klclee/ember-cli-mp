@@ -20,7 +20,7 @@ export default Ember.Mixin.create({
       eventValue = this.get('router.currentRouteName')
     }
 
-    if (typeof mixpanel != "undefined") {
+    if (typeof mixpanel.track === "function") {
       var mpEventProperty = {};
       mpEventProperty[mpConfig.pageViewPropertyName] = eventValue;
       mixpanel.track(mpConfig.pageViewEventName, mpEventProperty);
