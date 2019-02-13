@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-mp",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "description": "A Ember cli addon for integration with mixpanel.",
   "directories": {
     "doc": "doc",
