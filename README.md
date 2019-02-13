@@ -76,7 +76,7 @@ If you set ```trackAsPage``` to false it will use ```router.currentHandlerInfos`
 
 The ```mixpanel``` is available in global scope. So all mixpanel function stay as its.
 
-### Stubbing mixpanel object when debug is false and init is not called
+### Stubbing mixpanel object when debug is false and init is not called (For version >=0.1.10)
 
 When this happens the mixpanel object is not created properly you can use a provided mixin to stub out the calls to mixpanel:
 
