@@ -6,16 +6,15 @@ module.exports = {
   contentFor: function(type, config){
     if(type === 'head'){
       var mpConfig = config.mixpanel;
-      var mpKey = null;
+      var debug = true;
       if(mpConfig != null){
-        mpKey = mpConfig.mpKey;
+        debug = mpConfig.debug;
       }
 
-      if( mpKey != null ){
+      if( debug === false ){
         var mpInc = [
           '<script>',
           require('fs').readFileSync(__dirname + '/mp-include.js', {encoding: 'utf-8'}),
-          "mixpanel.init('" + mpKey + "');",
           '</script>'
         ];
         return mpInc.join("\n");
@@ -24,26 +23,7 @@ module.exports = {
 
         var devMp = [
         '<script>',
-        'window.mixpanel = {',
-        'track: function(st, obj){',
-        "console.log('mixpanel','track', st, obj);",
-        '},',
-        'track_links: function(element, st){',
-        "console.log('mixpanel','track_links', element, st);",
-        '},',
-        'identify: function(st){',
-        "console.log('mixpanel', 'identify',st);",
-        '},',
-        'alias: function(st){',
-        "console.log('mixpanel', 'alias',st);",
-        '},',
-        'people: {',
-        'set: function(st){',
-        "console.log('mixpanel',st);",
-        '},',
-        'track_charge: function(amount){',
-        "console.log('mixpanel', 'charged', amount);",
-        '}}};',
+        require('fs').readFileSync(__dirname + '/mp-console.js', {encoding: 'utf-8'}),
         '</script>'];
         return devMp.join("\n");
       }

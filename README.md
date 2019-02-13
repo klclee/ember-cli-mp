@@ -7,6 +7,8 @@ Inspired by [ember-cli-google-analytics](https://github.com/pgrippi/ember-cli-go
 * A mixin that tracks your route visits either as URL or route name. With configureable event name, property.
 
 **NOTE: for Ember >= 2.18 please use version 0.1.7 else use 0.1.6**
+**NOTE BREAKING change from version >=0.1.10**
+
 
 ## Installation
 
@@ -30,6 +32,8 @@ var Router = Ember.Router.extend(MpPageView,{
 
 In your ```config\environment.js``` add the following to set up to the right environment:
 
+
+#### For version <0.1.10
 ```javascript
 ENV.mixpanel = {
   pageViewEventName: 'visit',
@@ -40,6 +44,21 @@ ENV.mixpanel = {
 ```
 
 Just remove the ```mpKey``` property for development environment to have the tracking print out in console.
+
+#### For version >=0.1.10
+```javascript
+ENV.mixpanel = {
+  pageViewEventName: 'visit',
+  pageViewPropertyName: 'url',
+  trackAsPage: true,
+  debug: true
+};
+```
+
+Use the `debug` property to decide weather to use the mixpanel JS or just print `console.log`.
+
+To actually boot up mixpanel issue the following (most likely in application route): `mixpanel.init('mixpanel token')`
+
 
 Hopefully most of these are self explain. It will use the ```track``` function for pageView tracking. So with the above config you are doing the following:
 
