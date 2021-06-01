@@ -21,5 +21,8 @@ window.mixpanel = {
   },
   track_charge: function(amount){
     console.log('mixpanel', 'charged', amount);
+  },
+  reset: function() {
+    console.log('mixpanel', 'reset');
   }
 }
